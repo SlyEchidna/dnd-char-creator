@@ -12,8 +12,6 @@ public class AbilityScoreRoller {
 			// Second for loop to cycle and create rolls per score array
 			for(int b = 1; b <= 4; b++) {
 				roll[b-1] = 1+dice.nextInt(6);
-				//Print out Dice Rolls for Player to show accuracy
-				System.out.println("Roll " + b + " is " + roll[b-1]);
 			}
 			
 			// Bubble Sort rolls from small to big and add 
@@ -33,17 +31,7 @@ public class AbilityScoreRoller {
 	        
 	        //Add all but lowest die roll into score array
 	        score[a-1] = roll[1] + roll[2] + roll[3];
-	        
-	        //Print out Score Point Calculations for Player
-	        if(a == 1) {
-	        	System.out.println("Your 1st Score Point is " + score[a-1]);
-	        }else if (a == 2) {
-	        	System.out.println("Your 2nd Score Point is " + score[a-1]);
-	        }else if (a == 3) {
-	        	System.out.println("Your 3rd Score Point is " + score[a-1]);
-	        }else {
-	        	System.out.println("Your " + a + "th Score Point is " + score[a-1]);
-	        }
+			
 		}
 		return score;
 	}
